@@ -47,34 +47,13 @@ Figure 4:
 
 ## Summary
 
-To summarize, the following tasks were made to help Britta clean the data and perform an ETL:
+To summarize, the following temperature observations were made from the Oahu site:
 
-1. Create a function to read in the three files and give it a name.
-2. Open the Wikipedia JSON file and use the json.load() function to convert the JSON data to raw data.
-3. Read in the raw Wikipedia movie data as a Pandas DataFrame.
-4. Create a path to the Wikipedia data, the Kaggle metadata, and the MovieLens rating data files.
-5. Convert all three files to a DataFrame.
-6. Write a list comprehension to iterate through the cleaned wiki movies list.
-7. Write a try-except block that will catch errors while extracting the IMDb IDs with a regular expression string and dropping any imdb_id duplicates. If there is an error, capture and print the exception.
-8. Write a list comprehension to keep the columns that have non-null values from the DataFrame, then create a wiki_movies_df DataFrame from the list.
-9. Create a variable that will hold all the non-null values from the "Box office" column.
-10. Convert the box office data created to string values using the lambda and join functions.
-11. Write a regular expression to match the six elements of form_one and form_two of the box office data.
-12. Add the code that cleans the box office column in the wiki_movies_df DataFrame using the form_one and form_two lists.
-13. Add code that cleans the "budget" column in the wiki_movies_df DataFrame.
-14. Add code that cleans the "release" column in the wiki_movies_df DataFrame.
-15. Add code that cleans the "running time" column in the wiki_movies_df DataFrame.
-16. Use the variables provided to create a path to the Wikipedia data, the Kaggle metadata, and the MovieLens rating data files.
-17. Set the wiki_movies_df equal to the wiki_file variable.
-18. Merge the wiki_movies_df DataFrame and the kaggle_metadata DataFrames, then name the new DataFrame, movies_df.
-19. Drop unnecessary columns from the movies_df DataFrame.
-20. Add the fill_missing_kaggle_data() function that fills in the missing Kaggle data on the movies_df DataFrame.
-21. Call the fill_missing_kaggle_data() function with the movies_df DataFrame and the Kaggle and Wikipedia columns to be cleaned as the arguments.
-22. Filter the movies_df DataFrame to keep the necessary columns.
-23. Rename the columns in the movies_df DataFrame.
-24. Transform and merge the ratings DataFrame with the movies_df DataFrame, name the new DataFrame movies_with_ratings_df, then clean the movies_with_ratings_df DataFrame.
-25. Use the variables provided to create a path to the Wikipedia data, the Kaggle metadata, and the MovieLens rating data files.
-26. Add the code to create the connection to the PostgreSQL database, then add the movies_df DataFrame to a SQL database.
-27. Add the code that prints out the elapsed time to import each row.
-28. Run the program.
-29. After the program has finished, run a query on the PostgreSQL database that retreives the number of rows for the movies and ratings tables.
+1. For June, 1700 temperature observations were made with a mean average of 74 degrees and a standard deviation of 3.26 degrees.
+2. For June, the minimum and maximum temperatures observed ranged from 64 to 85 degrees, respectively.
+3. For June, 75 percent of all data points observed were 73 degrees and above.
+4. The temparature range for June provides for great surfing with minimal need for a wetsuit.
+5. For December, 1517 temperature observations were made with a mean average of 71 degrees and a standard deviation of 3.75 degrees.
+6. For December, the minimum and maximum temperatures observed ranged from 56 to 83 degrees, respectively.
+7. For December, 50 percent of all data points observed were 71 degrees and above.
+8. The temparature range for December provides for great surfing. However, thicker wetsuits may be needed for half the month which should provide more revenue for the surf shop.
