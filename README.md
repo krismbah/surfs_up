@@ -2,73 +2,47 @@
 
 ## Overview
 
-The purpose of this analysis is  to create an automated pipeline that takes in new data, performs the appropriate transformations, and loads the data into existing tables. It’ll need to refactor the code from this module to create a function that takes in the three files—Wikipedia data, Kaggle metadata, and the MovieLens rating data—and performs the ETL process by adding the data to a PostgreSQL database. The following tasks are to be completed: 
+The purpose of this analysis is  to provide W. Avy with more information about temperature trends before opening the surf shop. Specifically, he wants temperature data for the months of June and December in Oahu, in order to determine if the surf and ice cream shop business is sustainable year-round. The following tasks are to be completed: 
 
-1. Write an ETL Function to Read Three Data Files.
-2. Extract and Transform the Wikipedia Data.
-3. Extract and Transform the Kaggle data.
-4. Create the Movie Database.
+1. Determine the Summary Statistics for June.
+2. Determine the Summary Statistics for December.
+3. A written report for the statistical analysis.
 
 ## Results
 
-***Deliverable 1: Write an ETL Function to Read Three Data Files***
-Using knowledge of Python, Pandas, the ETL process, and code refactoring, write a function that reads in the three data files and creates three separate DataFrames.
+***Deliverable 1: Determine the Summary Statistics for June***
+Using Python, Pandas functions and methods, and SQLAlchemy, filter the date column of the Measurements table in the hawaii.sqlite database to retrieve all the temperatures for the month of June. Then, convert those temperatures to a list, create a DataFrame from the list, and generate the summary statistics.
+- Filter the date column from the Measurement table to retrieve all the temperatures for the month of June.
+- Convert the June temperatures to a list.
+- Create a DataFrame from the list of temperatures for the month of June (Figure 1).
+- Generate the summary statistics for the June temperatures DataFrame (Figure 2).
 
 Figure 1:
 
-![Deliverable1kaggle](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/Deliverable1kaggle.png)
+![June_DF](https://raw.githubusercontent.com/krismbah/surfs_up/main/June_DF.png)
 
 Figure 2:
 
-![Deliverable2wiki_df](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/Deliverable2wiki_df.png)
+![June_DF_Stat](https://raw.githubusercontent.com/krismbah/surfs_up/main/June_DF_Stat.png)
+
+
+
+***Deliverable 2: Determine the Summary Statistics for December***
+Using Python, Pandas functions and methods, and SQLAlchemy, filter the date column of the Measurements table in the hawaii.sqlite database to retrieve all the temperatures for the month of December. Then, convert those temperatures to a list, create a DataFrame from the list, and generate the summary statistics.
+- Filter the date column from the Measurement table to retrieve all the temperatures for the month of June.
+- Convert the June temperatures to a list.
+- Create a DataFrame from the list of temperatures for the month of December (Figure 3).
+- Generate the summary statistics for the December temperatures DataFrame (Figure 4).
 
 Figure 3:
 
-![Deliverable1ratings](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/Deliverable1ratings.png)
-
-
-***Deliverable 2: Extract and Transform the Wikipedia Data***
-Using knowledge of Python, Pandas, the ETL process, and code refactoring, extract and transform the Wikipedia data so you can merge it with the Kaggle metadata. While extracting the IMDb IDs using a regular expression string and dropping duplicates, use a try-except block to catch errors.
+![Dec_DF](https://raw.githubusercontent.com/krismbah/surfs_up/main/Dec_DF.png)
 
 Figure 4:
 
-![Deliverable2wiki_df](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/Deliverable2wiki_df.png)
-
-Figure 5:
-
-![Deliverable2wiki_df_columns](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/Deliverable2wiki_df_columns.png)
+![Dec_DF_Stat](https://raw.githubusercontent.com/krismbah/surfs_up/main/Dec_DF_Stat.png)
 
 
-***Deliverable 3: Extract and Transform the Kaggle data***
-Using knowledge of Python, Pandas, the ETL process, and code refactoring, extract and transform the Kaggle metadata and MovieLens rating data, then convert the transformed data into separate DataFrames. Then, you’ll merge the Kaggle metadata DataFrame with the Wikipedia movies DataFrame to create the movies_df DataFrame. Finally, you’ll merge the MovieLens rating data DataFrame with the movies_df DataFrame to create the movies_with_ratings_df.
-
-Figure 6:
-
-![Deliverable3wiki_df](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/Deliverable3wiki_df.png)
-
-Figure 7:
-
-![Deliverable3ratings_df](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/Deliverable3ratings_df.png)
-
-Figure 8:
-
-![Deliverable3movies_df](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/Deliverable3movies_df.png)
-
-
-***Deliverable 4: Create the Movie Database***
-Use knowledge of Python, Pandas, the ETL process, code refactoring, and PostgreSQL to add the movies_df DataFrame and MovieLens rating CSV data to a SQL database.
-
-Figure 9:
-
-![Deliverable4ETL](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/Deliverable4ETL.png)
-
-Figure 10:
-
-![movies_query](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/movies_query.png)
-
-Figure 11:
-
-![ratings_query](https://raw.githubusercontent.com/krismbah/Movies-ETL/main/ratings_query.png)
 
 
 ## Summary
